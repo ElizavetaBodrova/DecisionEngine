@@ -22,7 +22,7 @@ public class controller {
 
     @RequestMapping(value="/", method = RequestMethod.POST,
                     consumes = "text/xml")
-    public /*@ResponseBody*/ String calcAvailableLimit(@RequestBody String xmlDocument) throws JAXBException {
+    public @ResponseBody String calcAvailableLimit(@RequestBody String xmlDocument) throws JAXBException {
         String resultDocument= decisionEngine.addControlAndOutput(xmlDocument);
         return resultDocument;
     }

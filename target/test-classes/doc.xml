@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeXMLDocument xmlns="http://neoflex.ru/xModel/DE">
+    <ApplicationId>1</ApplicationId>
+    <Person>
+        <LastName>str1234</LastName>
+        <FirstName>str1234</FirstName>
+        <Patronymic>str1234</Patronymic>
+        <BirthDate>2012-12-13</BirthDate>
+        <Gender>1</Gender>
+        <Income>300000</Income>
+    </Person>
+    <Control>
+        <ErrorCode></ErrorCode>
+        <ErrorMsg></ErrorMsg>
+    </Control>
+    <Output>
+        <ApprovedLimit></ApprovedLimit>
+    </Output>
+</DeXMLDocument>
