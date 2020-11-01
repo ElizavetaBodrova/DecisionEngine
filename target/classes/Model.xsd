@@ -1,0 +1,38 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://neoflex.ru/xModel/DE"
+	targetNamespace="http://neoflex.ru/xModel/DE" elementFormDefault="unqualified"
+	attributeFormDefault="unqualified">
+	<xs:element name="DeXMLDocument">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ApplicationId" type="xs:string" />
+				<xs:element name="Person">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LastName" type="xs:string" />
+							<xs:element name="FirstName" type="xs:string" />
+							<xs:element name="Patronymic" type="xs:string" />
+							<xs:element name="BirthDate" type="xs:date" />
+							<xs:element name="Gender" type="xs:int" />
+							<xs:element name="Income" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Control">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ErrorCode" type="xs:string" />
+							<xs:element name="ErrorMsg" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Output">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ApprovedLimit" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
