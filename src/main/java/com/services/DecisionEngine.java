@@ -15,7 +15,7 @@ public class DecisionEngine {
 
 
     private final XMLDocumentParser xmlDocumentParser;
-    private final BigDecimal borderAge = BigDecimal.valueOf(60);
+    private final int borderAge = 60;
     private final BigDecimal borderAfter = BigDecimal.valueOf(40);
     private final BigDecimal limitBefore = BigDecimal.valueOf(18);
 
@@ -34,7 +34,7 @@ public class DecisionEngine {
             BigDecimal income = deXMLDocument.getPerson().getIncome();
             DeXMLDocument.Output output = new DeXMLDocument.Output();
             addControlNoError(deXMLDocument);
-            if (borderAge.compareTo(new BigDecimal(age)) > -1) {//for granny
+            if (borderAge>=age) {//for granny
 
                 if (income.compareTo(borderAfter) > -1) {
                     output.setApprovedLimit(income.divide(new BigDecimal(2)));
